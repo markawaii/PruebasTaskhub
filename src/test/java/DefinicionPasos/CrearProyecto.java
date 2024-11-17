@@ -10,9 +10,9 @@ import java.time.Duration;
 
 import io.cucumber.java.en.*;
 
-public class PasosCrearProyecto {
+public class CrearProyecto {
 
-    static WebDriver driver;
+	static WebDriver driver;
     static WebDriverWait wait;
 
     static {
@@ -156,7 +156,5 @@ public class PasosCrearProyecto {
             throw new RuntimeException("Error al cerrar las ventanas después de la verificación: " + e.getMessage());
         }
     }
-
-
-
+    
 }

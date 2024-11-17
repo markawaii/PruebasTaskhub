@@ -3,40 +3,35 @@ package DefinicionPasos;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import java.util.List;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class PasosLogin {
+import java.util.List;
 
-    private static WebDriver driver;
-    private static final String PATH_DRIVER = "./src/test/resources/chrome/chromedriver.exe";
-    private static final String DRIVER_TYPE = "webdriver.chrome.driver";
-    private static WebDriverWait wait;
+
+public class Login {
+	
+	private WebDriver driver; // Instancia local del WebDriver
+    private WebDriverWait wait;
 
     @Before
     public void setUp() {
-        // Configuración inicial del navegador
-        System.setProperty(DRIVER_TYPE, PATH_DRIVER);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Tiempo de espera ajustado
+        try {
+            driver = Configuracion.configure(); // Obtén la instancia del WebDriver desde Configuracion
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Tiempo de espera para condiciones explícitas
+        } catch (Exception e) {
+            throw new RuntimeException("Error al configurar el WebDriver: " + e.getMessage());
+        }
     }
 
     @After
     public void tearDown() {
-        // Cierre del navegador después de la prueba
-        if (driver != null) {
-            driver.quit();
-        }
+        Configuracion.cerrarDriver(); // Cierra el WebDriver después de la prueba
     }
 
     @Given("navego a la URL {string}")
@@ -74,7 +69,7 @@ public class PasosLogin {
         if (redirected) {
             System.out.println("Redirigido exitosamente a la URL: " + expectedUrl);
         } else {
-            System.out.println("No redirigido a la URL esperada. Prueba fallida.");
+            throw new AssertionError("No redirigido a la URL esperada: " + expectedUrl);
         }
     }
 
@@ -84,7 +79,7 @@ public class PasosLogin {
         if (onSameUrl) {
             System.out.println("Permanece en la URL esperada: " + expectedUrl);
         } else {
-            System.out.println("No se mantuvo en la URL esperada. Prueba fallida.");
+            throw new AssertionError("No se mantuvo en la URL esperada: " + expectedUrl);
         }
     }
 
@@ -96,10 +91,10 @@ public class PasosLogin {
             if (actualMessage.contains(expectedMessage)) {
                 System.out.println("Mensaje de error encontrado: " + actualMessage);
             } else {
-                System.out.println("El mensaje de error no coincide. Prueba fallida.");
+                throw new AssertionError("El mensaje de error no coincide. Esperado: " + expectedMessage + ", Actual: " + actualMessage);
             }
         } catch (Exception e) {
-            System.out.println("Mensaje de error no encontrado. Prueba fallida.");
+            throw new AssertionError("Mensaje de error no encontrado: " + expectedMessage);
         }
     }
 
@@ -118,10 +113,9 @@ public class PasosLogin {
             }
         }
 
-        if (allMessagesFound) {
-            System.out.println("Todos los mensajes de error fueron encontrados. Prueba pasada.");
-        } else {
-            System.out.println("Algunos mensajes de error no fueron encontrados. Prueba fallida.");
+        if (!allMessagesFound) {
+            throw new AssertionError("Algunos mensajes de error no fueron encontrados.");
         }
     }
+    
 }

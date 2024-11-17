@@ -7,26 +7,28 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Configuracion {
+	
+	 private static final ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
 
-    private static WebDriver driver; // Convertido a privado
+	    public static WebDriver configure() throws Exception {
+	        if (threadDriver.get() == null) {
+	            Path projectRoot = Paths.get(System.getProperty("user.dir"));
+	            Path driverPath = projectRoot.resolve("src/test/resources/chrome/chromedriver.exe");
 
-    public static WebDriver configure() throws Exception {
-        if (driver == null) { // Crear el driver solo si no existe
-            Path projectRoot = Paths.get(System.getProperty("user.dir"));
-            Path driverPath = projectRoot.resolve("src/test/resources/chrome/chromedriver.exe");
+	            System.setProperty("webdriver.chrome.driver", driverPath.toString());
+	            WebDriver driver = new ChromeDriver();
+	            driver.manage().window().maximize();
+	            driver.manage().deleteAllCookies();
+	            threadDriver.set(driver);
+	        }
+	        return threadDriver.get();
+	    }
 
-            System.setProperty("webdriver.chrome.driver", driverPath.toString());
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
-            driver.manage().deleteAllCookies();
-        }
-        return driver;
-    }
-
-    public static void cerrarDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null; // Restablecer la instancia
-        }
-    }
+	    public static void cerrarDriver() {
+	        WebDriver driver = threadDriver.get();
+	        if (driver != null) {
+	            driver.quit();
+	            threadDriver.remove(); // Limpia el `ThreadLocal` para evitar fugas de memoria
+	        }
+	    }
 }

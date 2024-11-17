@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="35.026" tests="9" skipped="0" failures="0" errors="0">
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="7.907">
+<testsuite name="Cucumber" time="37.67" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="7.121">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -20,7 +20,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="3.002">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="3.192">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -29,7 +29,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería ser redirigido a la URL "https://taskhub.cl/inicio"............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="7.386">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="6.896">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -38,7 +38,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="3.4">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="7.252">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -47,7 +47,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="3.33">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="3.414">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -56,7 +56,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="2.516">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="2.345">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -65,7 +65,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="2.377">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="2.382">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -74,7 +74,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="2.334">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="2.472">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -83,7 +83,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="2.532">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="2.372">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "' OR '1'='1".passed
