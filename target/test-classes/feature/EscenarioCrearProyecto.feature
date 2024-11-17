@@ -20,3 +20,29 @@ Feature: Crear Proyecto
     When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
     Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show"
     
+    
+  Scenario: Crear un nuevo proyecto sin nombre
+    When Hacer clic en el botón de navegación con id "menu-proyectos"
+    Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+    When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+    Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+    And Dejar el campo de nombre vacío con id "nombre"
+    And Seleccionar el primer cliente del selector con id "cliente_id"
+    And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+    And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+    When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+    #Then Verificar que el campo con id "cliente_id" muestra un mensaje de validación "Completa este campo"
+    And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+    
+  Scenario: Crear un proyecto sin cliente
+    When Hacer clic en el botón de navegación con id "menu-proyectos"
+    Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+    When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+    Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+    And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente"
+    And No seleccionar cliente en el selector con id "cliente_id"
+    And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+    And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+    When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+    #Then Verificar que el campo con id "cliente_id" muestra un mensaje de validación "Completa este campo"
+    And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"

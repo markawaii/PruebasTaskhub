@@ -3,6 +3,7 @@ package DefinicionPasos;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,18 +13,8 @@ import io.cucumber.java.en.*;
 
 public class CrearProyecto {
 
-	static WebDriver driver;
+    static WebDriver driver;
     static WebDriverWait wait;
-
-    static {
-        try {
-            driver = Configuracion.configure(); // Configuración del WebDriver
-            wait = new WebDriverWait(driver, Duration.ofSeconds(1));
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Error al configurar el WebDriver: " + e.getMessage());
-        }
-    }
 
     @Given("Navegar a la página principal {string}")
     public void navegarPaginaPrincipal(String url) {
@@ -65,7 +56,6 @@ public class CrearProyecto {
     @Then("Verificar que ingresamos a la vista de proyectos {string}")
     public void verificarVistaProyectos(String url) {
         String currentUrl = driver.getCurrentUrl();
-        System.out.println("URL actual: " + currentUrl);
         if (!currentUrl.equals(url)) {
             throw new AssertionError("URL esperada: " + url + ", pero se encontró: " + currentUrl);
         }
@@ -80,7 +70,6 @@ public class CrearProyecto {
     @Then("Verificar que ingresamos a la vista de creación de proyectos {string}")
     public void verificarVistaCreacionProyectos(String url) {
         String currentUrl = driver.getCurrentUrl();
-        System.out.println("URL actual: " + currentUrl);
         if (!currentUrl.equals(url)) {
             throw new AssertionError("URL esperada: " + url + ", pero se encontró: " + currentUrl);
         }
@@ -93,17 +82,6 @@ public class CrearProyecto {
         campoNombre.sendKeys(texto);
     }
 
-    @And("Seleccionar el primer cliente del selector con id {string}")
-    public void seleccionarPrimerCliente(String id) {
-        WebElement selectElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-        Select select = new Select(selectElement);
-        if (!select.getOptions().isEmpty()) {
-            select.selectByIndex(1);
-        } else {
-            throw new AssertionError("No hay opciones disponibles para seleccionar en el selector de clientes.");
-        }
-    }
-
     @And("Seleccionar el primer jefe de proyecto del selector con id {string}")
     public void seleccionarPrimerJefeProyecto(String id) {
         WebElement selectElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
@@ -111,7 +89,7 @@ public class CrearProyecto {
         if (!select.getOptions().isEmpty()) {
             select.selectByIndex(1);
         } else {
-            throw new AssertionError("No hay opciones disponibles para seleccionar en el selector de jefe de proyecto.");
+            throw new AssertionError("No hay opciones disponibles en el selector de jefe de proyecto.");
         }
     }
 
@@ -122,7 +100,7 @@ public class CrearProyecto {
         if (!select.getOptions().isEmpty()) {
             select.selectByIndex(1);
         } else {
-            throw new AssertionError("No hay opciones disponibles para seleccionar en el selector de tipo de proyecto.");
+            throw new AssertionError("No hay opciones disponibles en el selector de tipo de proyecto.");
         }
     }
 
@@ -132,29 +110,21 @@ public class CrearProyecto {
         botonGuardar.click();
     }
 
-    @Then("Verificar que llegamos a la vista del proyecto con la URL que contiene {string}")
-    public void verificarVistaProyectoShow(String textoEsperadoEnUrl) {
-        try {
-            String currentUrl = driver.getCurrentUrl();
-            System.out.println("URL actual: " + currentUrl);
-
-            if (!currentUrl.contains(textoEsperadoEnUrl)) {
-                throw new AssertionError("Se esperaba que la URL contuviera: " + textoEsperadoEnUrl + ", pero se encontró: " + currentUrl);
-            }
-
-            // Esperar 2 segundos antes de cerrar
-            System.out.println("Esperando 2 segundos antes de cerrar la pestaña...");
-            Thread.sleep(2000);
-
-            // Cerrar todas las ventanas y finalizar la sesión
-            System.out.println("Cerrando todas las ventanas y finalizando la sesión...");
-            driver.quit();
-            System.out.println("Sesión finalizada correctamente.");
-        } catch (InterruptedException e) {
-            throw new RuntimeException("Error durante la espera antes de cerrar la pestaña: " + e.getMessage());
-        } catch (Exception e) {
-            throw new RuntimeException("Error al cerrar las ventanas después de la verificación: " + e.getMessage());
+    @Then("Verificar que el campo con id {string} muestra un mensaje de validación {string}")
+    public void verificarMensajeDeValidacion(String id, String mensajeEsperado) {
+        WebElement campo = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].reportValidity();", campo);
+        String mensajeActual = campo.getAttribute("validationMessage");
+        if (!mensajeActual.equals(mensajeEsperado)) {
+            throw new AssertionError("Mensaje de validación esperado: " + mensajeEsperado + ", pero se encontró: " + mensajeActual);
         }
     }
-    
+
+    @Then("Permanecer en la vista de creación de proyectos {string}")
+    public void permanecerEnVistaCreacionProyectos(String urlEsperada) {
+        String currentUrl = driver.getCurrentUrl();
+        if (!currentUrl.equals(urlEsperada)) {
+            throw new AssertionError("URL esperada: " + urlEsperada + ", pero se encontró: " + currentUrl);
+        }
+    }
 }
