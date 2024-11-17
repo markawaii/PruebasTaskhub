@@ -1,7 +1,4 @@
-DefinicionPasos\PasosVisualizarProyecto.class
-DefinicionPasos\PasosCrearProyecto.class
 Ejecutador\Runner.class
-DefinicionPasos\PasosLogin.class
-DefinicionPasos\PasosModificarProyecto.class
-DefinicionPasos\PasosEliminarProyecto.class
 DefinicionPasos\Configuracion.class
+DefinicionPasos\CrearProyecto.class
+DefinicionPasos\Login.class

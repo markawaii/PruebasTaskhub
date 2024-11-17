@@ -7,7 +7,7 @@ Feature: Crear Proyecto
     And Hacer clic en el botón con id "login_button"
     Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio"
 
-  Scenario: Crear un nuevo proyecto
+	Scenario: Crear un nuevo proyecto
     Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio"
     When Hacer clic en el botón de navegación con id "menu-proyectos"
     Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
@@ -19,9 +19,8 @@ Feature: Crear Proyecto
     And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
     When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
     Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show"
-    
-    
-  Scenario: Crear un nuevo proyecto sin nombre
+        
+	Scenario: Crear un nuevo proyecto sin nombre
     When Hacer clic en el botón de navegación con id "menu-proyectos"
     Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
     When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
@@ -34,7 +33,7 @@ Feature: Crear Proyecto
     #Then Verificar que el campo con id "cliente_id" muestra un mensaje de validación "Completa este campo"
     And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
     
-  Scenario: Crear un proyecto sin cliente
+	Scenario: Crear un proyecto sin cliente
     When Hacer clic en el botón de navegación con id "menu-proyectos"
     Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
     When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
@@ -46,3 +45,115 @@ Feature: Crear Proyecto
     When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
     #Then Verificar que el campo con id "cliente_id" muestra un mensaje de validación "Completa este campo"
     And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+
+	Scenario: Crear un proyecto sin jefe de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin jefe de proyecto"
+	  And Seleccionar el primer cliente del selector con id "cliente_id"
+	  And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id"
+	  And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  #Then Verificar que el campo con id "jefe_proyecto_id" muestra un mensaje de validación "Completa este campo"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  
+	Scenario: Crear un proyecto sin tipo de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin tipo de proyecto"
+	  And Seleccionar el primer cliente del selector con id "cliente_id"
+	  And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+	  And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  #Then Verificar que el campo con id "tipo_proyecto_id" muestra un mensaje de validación "Completa este campo"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+
+	Scenario: Crear un proyecto sin nombre y sin cliente
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Dejar el campo de nombre vacío con id "nombre"
+	  And No seleccionar cliente en el selector con id "cliente_id"
+	  And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+	  And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+
+	Scenario: Crear un proyecto sin nombre y sin jefe de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Dejar el campo de nombre vacío con id "nombre"
+	  And Seleccionar el primer cliente del selector con id "cliente_id"
+	  And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id"
+	  And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	
+	Scenario: Crear un proyecto sin nombre y sin tipo de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Dejar el campo de nombre vacío con id "nombre"
+	  And Seleccionar el primer cliente del selector con id "cliente_id"
+	  And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+	  And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	
+	Scenario: Crear un proyecto sin cliente y sin jefe de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente y sin jefe de proyecto"
+	  And No seleccionar cliente en el selector con id "cliente_id"
+	  And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id"
+	  And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	
+	Scenario: Crear un proyecto sin cliente y sin tipo de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente y sin tipo de proyecto"
+	  And No seleccionar cliente en el selector con id "cliente_id"
+	  And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id"
+	  And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	
+	Scenario: Crear un proyecto sin jefe de proyecto y sin tipo de proyecto
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin jefe de proyecto y sin tipo de proyecto"
+	  And Seleccionar el primer cliente del selector con id "cliente_id"
+	  And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id"
+	  And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	
+	Scenario: Crear un proyecto sin ningún dato
+	  When Hacer clic en el botón de navegación con id "menu-proyectos"
+	  Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto"
+	  When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"
+	  Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+	  And Dejar el campo de nombre vacío con id "nombre"
+	  And No seleccionar cliente en el selector con id "cliente_id"
+	  And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id"
+	  And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id"
+	  When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
+	  And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create"
+
+	 
