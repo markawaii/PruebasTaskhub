@@ -96,13 +96,13 @@ public class CrearProyecto {
     }
 
     @And("Ingresar el nombre del nuevo proyecto con id {string} con el texto {string}")
-    public void ingresarNombreNuevoProyecto(String id, String texto) {
+    public void ingresarNombreNuevoProyecto(String id, String texto) throws InterruptedException {
         WebElement campoNombre = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
         campoNombre.clear();
         campoNombre.sendKeys(texto);
     }
 
-    @Then("Dejar el campo de nombre vacío con id {string}")
+    @Then("Dejar el campo vacío con id {string}")
     public void dejarCampoNombreVacio(String id) {
         WebElement campoNombre = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
         campoNombre.clear(); // Dejar vacío el campo
@@ -140,6 +140,13 @@ public class CrearProyecto {
 
     @When("Hacer clic en el botón de guardar con id {string}")
     public void hacerClickGuardar(String id) {
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         WebElement botonGuardar = wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
         botonGuardar.click();
     }
@@ -176,5 +183,18 @@ public class CrearProyecto {
         } catch (Exception e) {
             throw new AssertionError("No se pudo dejar vacío el campo '" + campo + "'. Verifique las opciones disponibles.");
         }
+    }
+
+    @When("Hacer clic en el botón agregar nueva fase con id {string}")
+    public void hacerClicEnElBotónAgregarNuevaFaceConId(String id) throws InterruptedException {
+        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
+        btn.click();
+    }
+
+    @And("Ingresar la cantidad de horas en el campo con id {string} con el texto {string}")
+    public void ingresarCantidadHorasNuevoProyecto(String id, String texto) throws InterruptedException {
+        WebElement campoNombre = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+        campoNombre.clear();
+        campoNombre.sendKeys(texto);
     }
 }
