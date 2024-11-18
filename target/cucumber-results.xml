@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="38.151" tests="11" skipped="0" failures="2" errors="0">
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="7.501">
+<testsuite name="Cucumber" time="74.974" tests="20" skipped="0" failures="0" errors="0">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="5.175">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -20,87 +20,216 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto sin nombre" time="1.071">
-<failure type="org.openqa.selenium.NoSuchSessionException" message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://taskhub.cl/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\ignac\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55939/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}">
-<![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://taskhub.cl/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\ignac\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55939/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
-	at DefinicionPasos.CrearProyecto.navegarPaginaPrincipal(CrearProyecto.java:31)
-	at ✽.Navegar a la página principal "https://taskhub.cl/"(file:///C:/Users/ignac/eclipse-workspace/PruebasTaskhub/src/test/resources/feature/escenarioCrearProyecto.feature:4)
-]]>
-</failure>
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto sin nombre" time="4.374">
 <system-out><![CDATA[
-Given Navegar a la página principal "https://taskhub.cl/"...................failed
-And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".skipped
-And Ingresar la contraseña en el campo con id "password" con el texto "123123123".skipped
-And Hacer clic en el botón con id "login_button"............................skipped
-Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".skipped
-When Hacer clic en el botón de navegación con id "menu-proyectos"...........skipped
-Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".skipped
-When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...skipped
-Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".skipped
-And Dejar el campo de nombre vacío con id "nombre"..........................skipped
-And Seleccionar el primer cliente del selector con id "cliente_id"..........skipped
-And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".skipped
-And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".skipped
-When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........skipped
-And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".skipped
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Dejar el campo de nombre vacío con id "nombre"..........................passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente" time="1.129">
-<failure type="org.openqa.selenium.NoSuchSessionException" message="Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://taskhub.cl/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\ignac\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55939/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}">
-<![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.26.0', revision: '8ccf0219d7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, get {url=https://taskhub.cl/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\ignac\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55939/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:151)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
-	at DefinicionPasos.CrearProyecto.navegarPaginaPrincipal(CrearProyecto.java:31)
-	at ✽.Navegar a la página principal "https://taskhub.cl/"(file:///C:/Users/ignac/eclipse-workspace/PruebasTaskhub/src/test/resources/feature/escenarioCrearProyecto.feature:4)
-]]>
-</failure>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente" time="4.292">
 <system-out><![CDATA[
-Given Navegar a la página principal "https://taskhub.cl/"...................failed
-And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".skipped
-And Ingresar la contraseña en el campo con id "password" con el texto "123123123".skipped
-And Hacer clic en el botón con id "login_button"............................skipped
-Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".skipped
-When Hacer clic en el botón de navegación con id "menu-proyectos"...........skipped
-Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".skipped
-When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...skipped
-Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".skipped
-And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente".skipped
-And No seleccionar cliente en el selector con id "cliente_id"...............skipped
-And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".skipped
-And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".skipped
-When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........skipped
-And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".skipped
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente".passed
+And No seleccionar cliente en el selector con id "cliente_id"...............passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="3.653">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto" time="4.422">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin jefe de proyecto".passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin tipo de proyecto" time="4.269">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin tipo de proyecto".passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin cliente" time="4.129">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Dejar el campo de nombre vacío con id "nombre"..........................passed
+And No seleccionar cliente en el selector con id "cliente_id"...............passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin jefe de proyecto" time="4.214">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Dejar el campo de nombre vacío con id "nombre"..........................passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin tipo de proyecto" time="4.412">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Dejar el campo de nombre vacío con id "nombre"..........................passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin jefe de proyecto" time="4.313">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente y sin jefe de proyecto".passed
+And No seleccionar cliente en el selector con id "cliente_id"...............passed
+And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id".passed
+And Seleccionar el primer tipo de proyecto del selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin tipo de proyecto" time="4.192">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin cliente y sin tipo de proyecto".passed
+And No seleccionar cliente en el selector con id "cliente_id"...............passed
+And Seleccionar el primer jefe de proyecto del selector con id "jefe_proyecto_id".passed
+And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto y sin tipo de proyecto" time="4.213">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Ingresar el nombre del nuevo proyecto con id "nombre" con el texto "Proyecto sin jefe de proyecto y sin tipo de proyecto".passed
+And Seleccionar el primer cliente del selector con id "cliente_id"..........passed
+And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id".passed
+And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin ningún dato" time="4.015">
+<system-out><![CDATA[
+Given Navegar a la página principal "https://taskhub.cl/"...................passed
+And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
+And Ingresar la contraseña en el campo con id "password" con el texto "123123123".passed
+And Hacer clic en el botón con id "login_button"............................passed
+Then Verificar que estamos en la página de inicio "https://taskhub.cl/inicio".passed
+When Hacer clic en el botón de navegación con id "menu-proyectos"...........passed
+Then Verificar que ingresamos a la vista de proyectos "https://taskhub.cl/proyecto".passed
+When Hacer clic en el botón de nuevo proyecto con id "btn-nuevo-proyecto"...passed
+Then Verificar que ingresamos a la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+And Dejar el campo de nombre vacío con id "nombre"..........................passed
+And No seleccionar cliente en el selector con id "cliente_id"...............passed
+And No seleccionar jefe de proyecto en el selector con id "jefe_proyecto_id".passed
+And No seleccionar tipo de proyecto en el selector con id "tipo_proyecto_id".passed
+When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........passed
+And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
+]]></system-out>
+</testcase>
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="2.987">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -109,7 +238,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería ser redirigido a la URL "https://taskhub.cl/inicio"............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="4.11">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="3.456">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -118,7 +247,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="4.014">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="3.267">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -127,7 +256,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="4.099">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="3.261">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -136,7 +265,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="3.019">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="2.521">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -145,7 +274,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="3.091">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="2.379">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -154,7 +283,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="3.149">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="2.458">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -163,7 +292,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="3.014">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="2.369">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "' OR '1'='1".passed
