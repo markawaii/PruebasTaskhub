@@ -105,7 +105,6 @@ public class Login {
 
         for (String expectedMessage : expectedMessages) {
             try {
-                WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'" + expectedMessage + "')]")));
                 System.out.println("Mensaje de error encontrado: " + expectedMessage);
             } catch (Exception e) {
                 System.out.println("Mensaje de error no encontrado: " + expectedMessage);
