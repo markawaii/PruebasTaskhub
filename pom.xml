@@ -12,6 +12,12 @@
     </properties>
 
     <dependencies>
+        <!-- Selenium Dependency -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.26.0</version>
+        </dependency>
         <!-- Cucumber Dependencies -->
         <dependency>
             <groupId>io.cucumber</groupId>
