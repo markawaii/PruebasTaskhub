@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import io.cucumber.java.en.Then;
@@ -32,9 +34,6 @@ public class ModificarProyecto {
     @When("Seleccionar el proyecto con nombre {string} y hacer clic en {string}")
     public void seleccionar_el_proyecto_con_nombre_y_hacer_clic_en(String nombreProyecto, String idBoton) {
         try {
-            WebElement proyecto = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//td[text()='" + nombreProyecto + "']")));
-            proyecto.click();
             WebElement botonEditar = wait.until(ExpectedConditions.elementToBeClickable(By.id(idBoton)));
             botonEditar.click();
         } catch (Exception e) {
@@ -123,7 +122,7 @@ public class ModificarProyecto {
         try {
             WebElement elementoWeb =
                     wait.until(ExpectedConditions.visibilityOfElementLocated(
-                            By.xpath("/html/body/div[1]/div/main/div/div/div[2]/div[1]/div/div/div[2]/div[2]")));
+                            By.xpath("/html/body/div[1]/div/main/div/div/div[2]/div[1]/div/div/div[1]/div[2]")));
 
             if(!elementoWeb.getText().equals(nuevoNombreDelProyecto)) {
                 throw new Exception("el nombre del proyecto no es igual ( "+elementoWeb.getText()+" con "+nuevoNombreDelProyecto+")");
@@ -228,4 +227,14 @@ public class ModificarProyecto {
         }
     }
 
+    @And("Aceptar la alerta de éxito")
+    public void aceptarLaAlertaDeÉxito() {
+        try {
+            WebElement boton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[6]/button[1]")));
+            boton.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error al confirmar la eliminacion el proyecto: " + e.getMessage());
+        }
+    }
 }

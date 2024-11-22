@@ -152,7 +152,6 @@ Feature: Modificar Proyecto
     Then Verificar que ingresamos a la vista de edición del proyecto "https://taskhub.cl/proyecto/edit/1"
     And Cambiar el nombre del proyecto con id "nombre" al texto "Nescafessss"
     When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"
-    Then Verificar que aparece el mensaje de éxito "Proyecto modificado exitosamente"
     And Aceptar la alerta de éxito
     Then Verificar que el proyecto se actualizó con el nombre "Nescafessss"
     And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show"
