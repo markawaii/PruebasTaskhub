@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="452.856" tests="50" skipped="0" failures="0" errors="0">
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="10.237">
+<testsuite name="Cucumber" time="460.565" tests="51" skipped="0" failures="0" errors="0">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto" time="10.277">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -20,7 +20,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial" time="10.278">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial" time="10.231">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -43,7 +43,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero sin nombre de proyecto" time="9.456">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero sin nombre de proyecto" time="9.29">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -66,7 +66,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial sin nombre y sin nombre de proyecto" time="9.343">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial sin nombre y sin nombre de proyecto" time="9.361">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -89,7 +89,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial sin nombre y sin horas de fase" time="9.419">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial sin nombre y sin horas de fase" time="9.27">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -112,7 +112,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero con nombre-fase y cantidad-horas vacios" time="9.356">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero con nombre-fase y cantidad-horas vacios" time="9.295">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -135,7 +135,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero con nombre-fase y sin cantidad-horas" time="9.478">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero con nombre-fase y sin cantidad-horas" time="9.435">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -158,7 +158,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero sin nombre-fase pero con cantidad-horas" time="9.447">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con una face inicial pero sin nombre-fase pero con cantidad-horas" time="9.412">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -181,7 +181,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales" time="10.278">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales" time="10.266">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -207,7 +207,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la segunda sin nombre" time="9.456">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la segunda sin nombre" time="9.423">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -233,7 +233,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la segunda sin horas asignadas" time="9.656">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la segunda sin horas asignadas" time="9.545">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -259,7 +259,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales pero sin nombre de proyecto" time="9.594">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales pero sin nombre de proyecto" time="9.52">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -311,7 +311,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la primera sin horas" time="9.443">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales y la primera sin horas" time="9.541">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -337,7 +337,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales sin tipo de proyecto" time="9.6">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto con dos fases iniciales sin tipo de proyecto" time="10.18">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -363,7 +363,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto sin nombre" time="9.251">
+<testcase classname="Crear Proyecto" name="Crear un nuevo proyecto sin nombre" time="9.772">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -382,7 +382,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente" time="9.193">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente" time="9.745">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -401,7 +401,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto" time="9.32">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto" time="9.783">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -420,7 +420,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin tipo de proyecto" time="11.223">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin tipo de proyecto" time="9.163">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -439,7 +439,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin cliente" time="9.081">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin cliente" time="9.17">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -458,7 +458,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin jefe de proyecto" time="9.281">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin jefe de proyecto" time="9.175">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -477,7 +477,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin tipo de proyecto" time="11.832">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin nombre y sin tipo de proyecto" time="9.303">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -496,7 +496,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin jefe de proyecto" time="9.183">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin jefe de proyecto" time="9.3">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -515,7 +515,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin tipo de proyecto" time="9.2">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin cliente y sin tipo de proyecto" time="9.348">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -534,7 +534,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto y sin tipo de proyecto" time="9.247">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin jefe de proyecto y sin tipo de proyecto" time="9.201">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -553,7 +553,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Crear Proyecto" name="Crear un proyecto sin ningún dato" time="9.03">
+<testcase classname="Crear Proyecto" name="Crear un proyecto sin ningún dato" time="9.039">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -572,7 +572,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de creación de proyectos "https://taskhub.cl/proyecto/create".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Eliminar Proyecto" name="Eliminar un proyecto" time="24.233">
+<testcase classname="Eliminar Proyecto" name="Eliminar un proyecto" time="24.207">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -587,7 +587,7 @@ And hacer click en el boton de confirmar que se quiere eliminar el proyecto.pass
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "proyecto".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Eliminar Proyecto" name="Eliminar un proyecto con fase" time="24.211">
+<testcase classname="Eliminar Proyecto" name="Eliminar un proyecto con fase" time="24.224">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -602,7 +602,7 @@ And hacer click en el boton de confirmar que se quiere eliminar el proyecto.pass
 Then Verificar que llegamos a la vista del proyecto con la URL que contiene "proyecto".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="3.137">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión exitoso con correo y contraseña correctos" time="3.12">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -611,7 +611,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería ser redirigido a la URL "https://taskhub.cl/inicio"............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="3.451">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña incorrecta" time="3.347">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -620,7 +620,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="3.228">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo incorrecto pero contraseña correcta" time="3.353">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -629,7 +629,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="3.278">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo y contraseña incorrectos" time="3.408">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "incorrect_email@example.com".passed
@@ -638,7 +638,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="2.337">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con el campo de correo vacío" time="2.437">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -647,7 +647,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="2.476">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con correo correcto pero contraseña vacía" time="2.485">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "igna.veliz@duocuc.cl".passed
@@ -656,7 +656,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="2.298">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con ambos campos vacíos" time="2.432">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto ""....passed
@@ -665,7 +665,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="2.353">
+<testcase classname="Inicio de sesión de usuario" name="Inicio de sesión fallido con intento de inyección SQL" time="2.405">
 <system-out><![CDATA[
 Given navego a la URL "https://taskhub.cl/".................................passed
 When ingreso en el campo de nombre de usuario con id "email" el texto "' OR '1'='1".passed
@@ -674,7 +674,7 @@ And hago clic en el botón de inicio de sesión con id "login_button".........pa
 Then debería permanecer en la URL "https://taskhub.cl/".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar el nombre de un proyecto existente" time="9.799">
+<testcase classname="Modificar Proyecto" name="Modificar el nombre de un proyecto existente" time="9.931">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -693,7 +693,7 @@ Then Verificar que el proyecto se actualizó con el nombre "Proyecto modificado"
 And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar el tipo de un proyecto existente" time="9.757">
+<testcase classname="Modificar Proyecto" name="Modificar el tipo de un proyecto existente" time="9.717">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -712,7 +712,7 @@ Then Verificar que el tipo de proyecto se actualizó a "Interno".............pas
 And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar el jefe de un proyecto existente" time="9.9">
+<testcase classname="Modificar Proyecto" name="Modificar el jefe de un proyecto existente" time="15.97">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -731,7 +731,7 @@ Then Verificar que el jefe de proyecto se actualizó a "Alessandro Halvorson".pa
 And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar el la fecha de un proyecto existente" time="10.032">
+<testcase classname="Modificar Proyecto" name="Modificar el la fecha de un proyecto existente" time="9.853">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -751,7 +751,7 @@ Then Verificar que fecha de termino proyecto se actualizó a "2024-11-30"....pas
 And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre vacio" time="9.195">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre vacio" time="9.046">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -767,7 +767,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el cliente vacio" time="8.956">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el cliente vacio" time="8.997">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -783,7 +783,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el jefe de proyecto vacio" time="9.078">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el jefe de proyecto vacio" time="8.95">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -799,7 +799,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el tipo de proyecto vacio" time="8.984">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el tipo de proyecto vacio" time="9.179">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -815,7 +815,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y cliente vacio" time="8.985">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y cliente vacio" time="9.008">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -832,7 +832,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y jefe de proyecto vacio" time="9.167">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y jefe de proyecto vacio" time="9.08">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -849,7 +849,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto vacio" time="9.102">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto vacio" time="8.965">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -866,7 +866,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto y jefe de proyecto vacio" time="9.079">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto y jefe de proyecto vacio" time="9.024">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -884,7 +884,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto y jefe de proyecto y cliente vacio" time="9.142">
+<testcase classname="Modificar Proyecto" name="Modificar un proyecto existente dejando el nombre de proyecto y tipo de proyecto y jefe de proyecto y cliente vacio" time="9.134">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -903,7 +903,7 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Permanecer en la vista de modificaion de proyectos "https://taskhub.cl/proyecto/edit/1".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Modificar Proyecto" name="Revertir el nombre del proyecto al anterior" time="9.897">
+<testcase classname="Modificar Proyecto" name="Revertir el nombre del proyecto al anterior" time="9.818">
 <system-out><![CDATA[
 Given Navegar a la página principal "https://taskhub.cl/"...................passed
 And Ingresar el usuario en el campo con id "email" con el texto "igna.veliz@duocuc.cl".passed
@@ -919,6 +919,32 @@ When Hacer clic en el botón de guardar con id "btn-guardar-proyecto"........pas
 And Aceptar la alerta de éxito..............................................passed
 Then Verificar que el proyecto se actualizó con el nombre "Nescafessss".....passed
 And Verificar que llegamos a la vista del proyecto para modificar con la URL que contiene "show".passed
+]]></system-out>
+</testcase>
+<testcase classname="Visualizar Proyecto" name="Abrir y visualizar el proyecto existente" time="4.497">
+<system-out><![CDATA[
+Given Acceder a la página principal "https://taskhub.cl/"...................passed
+And Proveer el usuario con id "email" y el valor "igna.veliz@duocuc.cl".....passed
+And Proveer la contraseña con id "password" y el valor "123123123"..........passed
+And Pulsar el botón con id "login_button"...................................passed
+Then Confirmar que estamos en la página inicial "https://taskhub.cl/inicio".passed
+When Hacer clic en el menú lateral con id "menu-proyectos"..................passed
+Then Confirmar que hemos ingresado a la página de proyectos "https://taskhub.cl/proyecto".passed
+When Seleccionar el proyecto titulado "Nescafessss" y pulsar el botón con id "btn-ver-1".passed
+Then Confirmar que hemos ingresado a la vista de detalles del proyecto "https://taskhub.cl/proyecto/show/1".passed
+And Validar que la sección "Información del proyecto" está visible..........passed
+And Validar que el campo "Nombre" muestra "Nescafessss".....................passed
+And Validar que el campo "Cliente" muestra "Ignacio Andres Veliz Seguel"....passed
+And Validar que el campo "Jefe de proyecto" muestra "Alessandro Halvorson"..passed
+And Validar que el campo "Fecha de inicio" muestra "2024-11-25".............passed
+And Validar que el campo "Fecha de fin" muestra "2024-11-30"................passed
+And Validar que el campo "Total de horas del proyecto" muestra "475"........passed
+And Validar que el campo "Estado" muestra "En Desarrolo"....................passed
+And Validar que el campo "Tipo de proyecto" muestra "Interno"...............passed
+And Validar que el campo "Porcentaje de avance" muestra "13%"...............passed
+And Validar que el campo "Última actualización de avance" muestra "Aun sin avance".passed
+And Validar que el campo "Cerrado" muestra "n/a"............................passed
+And Validar que el campo "Fecha cierre de proyecto" muestra "n/a"...........passed
 ]]></system-out>
 </testcase>
 </testsuite>
