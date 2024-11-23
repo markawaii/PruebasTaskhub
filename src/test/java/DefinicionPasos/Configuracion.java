@@ -1,6 +1,6 @@
 package DefinicionPasos;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.nio.file.Path;
@@ -19,6 +19,10 @@ public class Configuracion {
 	            WebDriver driver = new ChromeDriver();
 	            driver.manage().window().maximize();
 	            driver.manage().deleteAllCookies();
+
+				JavascriptExecutor executor = (JavascriptExecutor)driver;
+				executor.executeScript("document.body.style.zoom = '0.5'");
+
 	            threadDriver.set(driver);
 	        }
 	        return threadDriver.get();
