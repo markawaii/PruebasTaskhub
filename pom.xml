@@ -44,7 +44,17 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- Eliminar dependencias innecesarias o conflictivas -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -86,11 +96,16 @@
                         <configuration>
                             <projectName>PruebasTaskhub</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                            <inputDirectory>${project.build.directory}/</inputDirectory>
                             <jsonFiles>
-                                <param>${project.build.directory}/cucumber-reports/Cucumber.json</param>
+                                <param>**/*.json</param>
                             </jsonFiles>
+                            <classificationDirectory>${project.build.directory}/</classificationDirectory>
+                            <classificationFiles>
+                                <param>sample.properties</param>
+                                <param>other.properties</param>
+                            </classificationFiles>
                             <checkBuildResult>true</checkBuildResult>
-                            <!-- Se eliminó el parámetro 'parallelTesting' -->
                         </configuration>
                     </execution>
                 </executions>
