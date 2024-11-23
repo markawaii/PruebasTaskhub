@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>PruebasTaskhub</td>
+        <td>1</td>
+      <td>23 Nov 2024, 10:23</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.dejarCampoNombreVacio(java.lang.String)</td>
+              <td>25</td>
+              <td class="duration" data-value="25740812">0.025</td>
+              <td class="duration" data-value="25740812">0.029</td>
+              <td class="duration" data-value="643520300">0.643</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.hacerClicEnElBot&oacute;nAgregarNuevaFaceConId(java.lang.String)</td>
+              <td>21</td>
+              <td class="duration" data-value="34042438">0.034</td>
+              <td class="duration" data-value="34042438">0.037</td>
+              <td class="duration" data-value="714891200">0.714</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.hacerClickBoton(java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="574698273">0.574</td>
+              <td class="duration" data-value="574698273">0.661</td>
+              <td class="duration" data-value="24137327500">24.137</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.hacerClickBotonNavegacion(java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="546437454">0.546</td>
+              <td class="duration" data-value="546437454">0.590</td>
+              <td class="duration" data-value="22950373100">22.950</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.hacerClickGuardar(java.lang.String)</td>
+              <td>40</td>
+              <td class="duration" data-value="5106262105">5.106</td>
+              <td class="duration" data-value="5106262105">5.358</td>
+              <td class="duration" data-value="204250484200">3:24.250</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.hacerClickNuevoProyecto(java.lang.String)</td>
+              <td>26</td>
+              <td class="duration" data-value="337900626">0.337</td>
+              <td class="duration" data-value="337900626">0.360</td>
+              <td class="duration" data-value="8785416300">8.785</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.ingresarCantidadHorasNuevoProyecto(java.lang.String,java.lang.String)</td>
+              <td>16</td>
+              <td class="duration" data-value="52665293">0.052</td>
+              <td class="duration" data-value="52665293">0.054</td>
+              <td class="duration" data-value="842644700">0.842</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.ingresarContrasena(java.lang.String,java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="66255707">0.066</td>
+              <td class="duration" data-value="66255707">0.086</td>
+              <td class="duration" data-value="2782739700">2.782</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.ingresarNombreNuevoProyecto(java.lang.String,java.lang.String)</td>
+              <td>33</td>
+              <td class="duration" data-value="73733136">0.073</td>
+              <td class="duration" data-value="73733136">0.165</td>
+              <td class="duration" data-value="2433193500">2.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.ingresarUsuario(java.lang.String,java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="96051316">0.096</td>
+              <td class="duration" data-value="96051316">0.149</td>
+              <td class="duration" data-value="4034155300">4.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.navegarPaginaPrincipal(java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="1636572600">1.636</td>
+              <td class="duration" data-value="1636572600">2.445</td>
+              <td class="duration" data-value="68736049200">1:8.736</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.noSeleccionarCliente(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="42443488">0.042</td>
+              <td class="duration" data-value="42443488">0.051</td>
+              <td class="duration" data-value="381991400">0.381</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.noSeleccionarJefeDeProyecto(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="40578211">0.040</td>
+              <td class="duration" data-value="40578211">0.055</td>
+              <td class="duration" data-value="365203900">0.365</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.noSeleccionarTipoDeProyecto(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="44065155">0.044</td>
+              <td class="duration" data-value="44065155">0.055</td>
+              <td class="duration" data-value="396586400">0.396</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.permanecerEnVistaCreacion(java.lang.String)</td>
+              <td>23</td>
+              <td class="duration" data-value="3016360">0.003</td>
+              <td class="duration" data-value="3016360">0.005</td>
+              <td class="duration" data-value="69376300">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.seleccionarPrimerCliente(java.lang.String)</td>
+              <td>21</td>
+              <td class="duration" data-value="67273204">0.067</td>
+              <td class="duration" data-value="67273204">0.097</td>
+              <td class="duration" data-value="1412737300">1.412</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.seleccionarPrimerJefeProyecto(java.lang.String)</td>
+              <td>21</td>
+              <td class="duration" data-value="55339557">0.055</td>
+              <td class="duration" data-value="55339557">0.080</td>
+              <td class="duration" data-value="1162130700">1.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.seleccionarPrimerTipoProyecto(java.lang.String)</td>
+              <td>20</td>
+              <td class="duration" data-value="53970475">0.053</td>
+              <td class="duration" data-value="53970475">0.074</td>
+              <td class="duration" data-value="1079409500">1.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.setUp()</td>
+              <td>50</td>
+              <td class="duration" data-value="555996066">0.555</td>
+              <td class="duration" data-value="555996066">0.927</td>
+              <td class="duration" data-value="27799803300">27.799</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.tearDown()</td>
+              <td>50</td>
+              <td class="duration" data-value="145168">0.000</td>
+              <td class="duration" data-value="145168">0.001</td>
+              <td class="duration" data-value="7258400">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.verificarPaginaInicio(java.lang.String)</td>
+              <td>59</td>
+              <td class="duration" data-value="45587110">0.045</td>
+              <td class="duration" data-value="45587110">0.257</td>
+              <td class="duration" data-value="2689639500">2.689</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.verificarVistaCreacionProyectos(java.lang.String)</td>
+              <td>26</td>
+              <td class="duration" data-value="3630611">0.003</td>
+              <td class="duration" data-value="3630611">0.006</td>
+              <td class="duration" data-value="94395900">0.094</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.verificarVistaProyectoShow(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="189276760">0.189</td>
+              <td class="duration" data-value="189276760">0.384</td>
+              <td class="duration" data-value="946383800">0.946</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.CrearProyecto.verificarVistaProyectos(java.lang.String)</td>
+              <td>42</td>
+              <td class="duration" data-value="2776185">0.002</td>
+              <td class="duration" data-value="2776185">0.005</td>
+              <td class="duration" data-value="116599800">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.EliminarProyecto.hacerClicEnElBot&oacute;nDeEliminarProyectoConId(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="10264140750">10.264</td>
+              <td class="duration" data-value="10264140750">10.273</td>
+              <td class="duration" data-value="20528281500">20.528</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.EliminarProyecto.hacerClickEnElBotonDeConfirmarQueSeQuiereEliminarElProyecto()</td>
+              <td>2</td>
+              <td class="duration" data-value="10264612450">10.264</td>
+              <td class="duration" data-value="10264612450">10.265</td>
+              <td class="duration" data-value="20529224900">20.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.EliminarProyecto.setUp()</td>
+              <td>50</td>
+              <td class="duration" data-value="100646">0.000</td>
+              <td class="duration" data-value="100646">0.001</td>
+              <td class="duration" data-value="5032300">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.EliminarProyecto.tearDown()</td>
+              <td>50</td>
+              <td class="duration" data-value="100168">0.000</td>
+              <td class="duration" data-value="100168">0.001</td>
+              <td class="duration" data-value="5008400">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.deberia_permanecer_en_la_url(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="2809857">0.002</td>
+              <td class="duration" data-value="2809857">0.004</td>
+              <td class="duration" data-value="19669000">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.deberia_ser_redirigido_a_la_url(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3169500">0.003</td>
+              <td class="duration" data-value="3169500">0.003</td>
+              <td class="duration" data-value="3169500">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.hago_clic_en_el_boton_de_inicio_de_sesion_con_id(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="449711325">0.449</td>
+              <td class="duration" data-value="449711325">1.006</td>
+              <td class="duration" data-value="3597690600">3.597</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.ingreso_en_el_campo_de_contrase&ntilde;a_con_id_el_texto(java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="67320175">0.067</td>
+              <td class="duration" data-value="67320175">0.099</td>
+              <td class="duration" data-value="538561400">0.538</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.ingreso_en_el_campo_de_nombre_de_usuario_con_id_el_texto(java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="75598037">0.075</td>
+              <td class="duration" data-value="75598037">0.102</td>
+              <td class="duration" data-value="604784300">0.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.navego_a_la_url(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="1656397987">1.656</td>
+              <td class="duration" data-value="1656397987">1.802</td>
+              <td class="duration" data-value="13251183900">13.251</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.setUp()</td>
+              <td>50</td>
+              <td class="duration" data-value="39978">0.000</td>
+              <td class="duration" data-value="39978">0.001</td>
+              <td class="duration" data-value="1998900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.Login.tearDown()</td>
+              <td>50</td>
+              <td class="duration" data-value="106068936">0.106</td>
+              <td class="duration" data-value="106068936">0.120</td>
+              <td class="duration" data-value="5303446800">5.303</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.aceptarLaAlerta()</td>
+              <td>4</td>
+              <td class="duration" data-value="41060950">0.041</td>
+              <td class="duration" data-value="41060950">0.048</td>
+              <td class="duration" data-value="164243800">0.164</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.aceptarLaAlertaDe&Eacute;xito()</td>
+              <td>1</td>
+              <td class="duration" data-value="415740100">0.415</td>
+              <td class="duration" data-value="415740100">0.415</td>
+              <td class="duration" data-value="415740100">0.415</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.cambiar_el_nombre_del_proyecto_con_id_al_texto(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="94309550">0.094</td>
+              <td class="duration" data-value="94309550">0.095</td>
+              <td class="duration" data-value="188619100">0.188</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.modificarLaFechaConElCampoIdCampoDelProyectoAString(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="185224100">0.185</td>
+              <td class="duration" data-value="185224100">0.185</td>
+              <td class="duration" data-value="185224100">0.185</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.permanecerEnVistaCreacion(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="2643444">0.002</td>
+              <td class="duration" data-value="2643444">0.004</td>
+              <td class="duration" data-value="23791000">0.023</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.seleccionarLaOpcionDelSelectorConId(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="48286650">0.048</td>
+              <td class="duration" data-value="48286650">0.049</td>
+              <td class="duration" data-value="96573300">0.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.seleccionar_el_proyecto_con_nombre_y_hacer_clic_en(java.lang.String,java.lang.String)</td>
+              <td>14</td>
+              <td class="duration" data-value="334143992">0.334</td>
+              <td class="duration" data-value="334143992">0.341</td>
+              <td class="duration" data-value="4678015900">4.678</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueApareceElMensajeDe&Eacute;xitoEnElElemento(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="397556575">0.397</td>
+              <td class="duration" data-value="397556575">0.409</td>
+              <td class="duration" data-value="1590226300">1.590</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueElJefeDeProyectoSeActualiz&oacute;A(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="31054400">0.031</td>
+              <td class="duration" data-value="31054400">0.031</td>
+              <td class="duration" data-value="31054400">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueElProyectoSeActualiz&oacute;ConElNombre(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="27220800">0.027</td>
+              <td class="duration" data-value="27220800">0.030</td>
+              <td class="duration" data-value="54441600">0.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueElTipoDeProyectoSeActualiz&oacute;A(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="39347600">0.039</td>
+              <td class="duration" data-value="39347600">0.039</td>
+              <td class="duration" data-value="39347600">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueFechaDeInicioProyectoSeActualiz&oacute;A(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="40066200">0.040</td>
+              <td class="duration" data-value="40066200">0.040</td>
+              <td class="duration" data-value="40066200">0.040</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificarQueFechaDeTerminoProyectoSeActualiz&oacute;A(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="16522600">0.016</td>
+              <td class="duration" data-value="16522600">0.016</td>
+              <td class="duration" data-value="16522600">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificar_que_ingresamos_a_la_vista_de_edicion_del_proyecto(java.lang.String)</td>
+              <td>14</td>
+              <td class="duration" data-value="4043342">0.004</td>
+              <td class="duration" data-value="4043342">0.006</td>
+              <td class="duration" data-value="56606800">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DefinicionPasos.ModificarProyecto.verificar_que_llegamos_a_la_vista_del_proyecto_para_modificar_con_la_url_que_contiene(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="3204340">0.003</td>
+              <td class="duration" data-value="3204340">0.007</td>
+              <td class="duration" data-value="16021700">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>51</td>
+            <td>1021</td>
+            <td class="duration">0.439</td>
+            <td class="duration">3:24.250</td>
+            <td class="duration">7:28.816</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
